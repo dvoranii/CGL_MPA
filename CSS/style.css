@@ -8,6 +8,7 @@
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
+  background-color: #ffffff;
 }
 
 .container {
@@ -17,16 +18,18 @@ body {
 }
 
 .header-logo {
-  max-width: 30%;
-  padding: 10px;
+  width: 300px;
+  height: fit-content;
+  padding: 20px;
 }
 
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100vw;
-  height: 12vh;
-  background: #222222;
+  height: fit-content;
+  background: #6793aa;
 }
 
 .nav-inner {
@@ -151,11 +154,16 @@ body {
 .title-wrapper {
   display: flex;
   align-items: center;
+  padding-bottom: 1.2rem;
 }
 
 .title-wrapper img {
   width: 90px;
   height: auto;
+}
+
+.title-wrapper h1 {
+  padding-left: 1.2rem;
 }
 
 .service-freight-wrapper {
@@ -166,5 +174,54 @@ body {
   padding-left: 20px;
 }
 .service-freight-wrapper img {
-  width: 40vw;
+  width: 30vw;
 }
+
+.title-wrapper.sporting-title-wrapper {
+  justify-content: center;
+}
+
+.title-wrapper.sporting-title-wrapper p {
+  padding-left: 1.2rem;
+}
+
+.warehouse-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+.warehouse-wrapper img {
+  max-width: 80%;
+}
+
+.warehouse-list {
+  padding-left: 1.8rem;
+  padding-top: 1.2rem;
+}
+
+.sporting-goods-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.sporting-goods-grid img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.air-service-cell img {
+  grid-column: 1;
+}
+
+.air-service-cell p {
+  grid-column: 2;
+}
+
+.sporting-goods-grid p {
+  padding-top: 2.4rem;
+  padding-left: 1.2rem;
+}
+/* .air-service-cell {
+  grid-column: 1;
+} */
