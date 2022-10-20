@@ -1,0 +1,25 @@
+.contact-wrapper {
+  display: flex;
+  margin-top: 1.2rem;
+}
+.contact-info {
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.title-wrapper img {
+  width: 90px;
+  height: auto;
+}
+
+.contact-form-wrapper-outer {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 1.2rem;
+}
+
+.contact-form-wrapper-inner {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
