@@ -54,6 +54,141 @@
         </div>
       </div>
     </nav>
-    <p>sadfsdf</p>
+    <div class="container">
+      <div class="title-wrapper">
+        <img src="/assets/globe-icon-img.png" alt="" />
+        <h1>Quote Request Form</h1>
+      </div>
+      <p>
+        Fill out the information that applies in the form below and hit the
+        "submit quote request" button at the bottom of the form.
+      </p>
+      <br />
+
+      <div class="form-wrapper-grid">
+        <div class="company-info-a">
+          <label for="">Company Information</label>
+          <input type="text" placeholder="*Your Name:" />
+          <input type="text" placeholder="Company Name:" />
+        </div>
+        <div class="company-info-b">
+          <label for="">&nbsp;</label>
+          <input type="text" placeholder="email:" />
+          <input type="text" placeholder="*Phone number:" />
+        </div>
+
+        <div class="pickup-info">
+          <br />
+          <label for="">Pickup Information</label>
+          <textarea
+            class="pickup-info-textarea"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="* Pick up address or origin Airport port"
+          ></textarea>
+        </div>
+
+        <div class="shipping-info">
+          <br />
+          <label for="">Shipping Information</label>
+          <textarea
+            class="shipping-info-textarea"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="* Shipping address, origin or airport port"
+          ></textarea>
+        </div>
+
+        <!-- ------------------------------ -->
+        <div class="shippment-details">
+          <br />
+          <p>Shippment Details</p>
+          <input
+            type="text"
+            placeholder="* Number of skids"
+            class="number-skids"
+          />
+          <input
+            type="text"
+            placeholder="* Number of pieces"
+            class="number-pieces"
+          />
+          <select
+            name=""
+            id=""
+            placeholder="* Service"
+            class="shippment-service-type"
+          >
+            <option value="" selected disabled hidden>* Service</option>
+            <option value="">Air</option>
+            <option value="">Ocean</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Commodity and HS Codes"
+            class="hs-codes"
+          />
+        </div>
+        <!-- ------------------------------ -->
+
+        <div class="shippment-cont">
+          <p class="spacer">&nbsp;</p>
+          <input type="text" class="cell1" placeholder="* Weight"></input>
+          <select name="" id="" class="cell2">
+            <option value="" selected disabled hidden>* Units Lbs or Kg</option>
+            <option value="">Lbs</option>
+            <option value="">Kg</option>
+          </select>
+          <select name="" id="" class="cell3">
+
+            <option value="" selected disabled hidden>* Hazardous Yes or No</option>
+            <option value="">Hazardous - YES</option>
+            <option value="">Hazardous - NO</option>
+          </select>
+          <div class="checkbox-wrapper" class="cell4">
+           
+            <input type="checkbox" class="checkbox">
+            <label for="" class="checkbox-label">Non Personal Effects</label>
+          </div>
+        </div>
+
+        <div class="skid-type-wrapper">
+          <input type="text" placeholder="Type: (Skid, Carton, Tube etc)">
+          <input type="text" placeholder="Type: (Skid, Carton, Tube etc)">
+          <input type="text" placeholder="Type: (Skid, Carton, Tube etc)">
+          <input type="text" placeholder="Type: (Skid, Carton, Tube etc)">
+        </div>
+
+        <div class="skid-dimensions">
+          <input type="text" placeholder="Length">
+          <input type="text" placeholder="Width">
+          <input type="text" placeholder="Height">
+          <input type="text" placeholder="Length">
+          <input type="text" placeholder="Width">
+          <input type="text" placeholder="Height">
+          <input type="text" placeholder="Length">
+          <input type="text" placeholder="Width">
+          <input type="text" placeholder="Height">
+          <input type="text" placeholder="Length">
+          <input type="text" placeholder="Width">
+          <input type="text" placeholder="Height">
+        </div>
+
+        <div class="additional-info">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Additional information or Special instructions"></textarea>
+        </div>
+
+        <div class="submit-btn-container">
+          <button>SUBMIT</button>
+        </div>
+        <div class="clear-btn-container">
+          <button>CLEAR</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

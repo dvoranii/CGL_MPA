@@ -162,10 +162,6 @@ body {
   height: auto;
 }
 
-.title-wrapper h1 {
-  padding-left: 1.2rem;
-}
-
 .service-freight-wrapper {
   display: flex;
   align-items: center;
@@ -222,6 +218,78 @@ body {
   padding-top: 2.4rem;
   padding-left: 1.2rem;
 }
-/* .air-service-cell {
-  grid-column: 1;
-} */
+
+.hero-logo {
+  max-width: 80vw;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.5)),
+    url("/assets/ocean.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.form-wrapper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.form-wrapper-grid input,
+.pickup-info-textarea,
+.shipping-info-textarea {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.number-pieces,
+.number-skids {
+  width: 49% !important;
+}
+
+.shippment-service-type,
+.hs-codes {
+  width: 49% !important;
+}
+
+.shippment-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.spacer {
+  grid-column: span 2;
+}
+
+.cell1,
+.cell2,
+.cell3 {
+  height: 50%;
+  margin-top: 1.2rem !important;
+  width: 98% !important;
+}
+
+input.checkbox {
+  width: 20%;
+}
+
+.checkbox-label {
+  font-size: 12px;
+}
+
+.skid-dimensions input {
+  width: 32% !important;
+}
+
+.additional-info {
+  grid-column: span 2;
+  margin-top: 1.2rem;
+}
+.additional-info textarea {
+  width: 100%;
+}
