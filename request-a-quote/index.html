@@ -54,6 +54,7 @@
         </div>
       </div>
     </nav>
+
     <div class="container">
       <div class="title-wrapper">
         <img src="/assets/globe-icon-img.png" alt="" />
@@ -65,16 +66,16 @@
       </p>
       <br />
 
-      <div class="form-wrapper-grid">
+      <form class="form-wrapper-grid">
         <div class="company-info-a">
           <label for="">Company Information</label>
-          <input type="text" placeholder="*Your Name:" />
-          <input type="text" placeholder="Company Name:" />
+          <input type="text" placeholder="*Your Name" />
+          <input type="text" placeholder="Company Name" />
         </div>
         <div class="company-info-b">
           <label for="">&nbsp;</label>
-          <input type="text" placeholder="email:" />
-          <input type="text" placeholder="*Phone number:" />
+          <input type="email" placeholder="email" />
+          <input type="tel" placeholder="*Phone number" />
         </div>
 
         <div class="pickup-info">
@@ -183,12 +184,13 @@
         </div>
 
         <div class="submit-btn-container">
-          <button>SUBMIT</button>
+          <button type="submit" class="submit-btn">SUBMIT</button>
         </div>
         <div class="clear-btn-container">
           <button>CLEAR</button>
         </div>
-      </div>
+      </form>
     </div>
+    <script src="/JS/app.js"></script>
   </body>
 </html>
