@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/contact.css" />
     <title>Document</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
         <a href="../" class="nav__link" data-link>Home</a>
         <a href="../about" class="nav__link" data-link>About</a>
         <div class="service-submenu">
-          <a href="#" class="nav__link" data-link>Services ▾</a>
+          <a href="#" class="nav__link" data-link>Services&nbsp;▾</a>
           <div class="submenu-option1">
             <!-- this refreshed the page, rewatch the tutorial -->
             <div class="transportation-menu">
@@ -40,7 +41,7 @@
         >
         <!--  -->
         <div class="service-submenu">
-          <a href="#" class="nav__link">Contact ▾</a>
+          <a href="#" class="nav__link">Contact&nbsp;▾</a>
           <div class="submenu-option1">
             <!-- this refreshed the page, rewatch the tutorial -->
             <a href="../contact-on" class="nav__link" data-link
@@ -66,16 +67,17 @@
       </p>
       <br />
 
-      <form class="form-wrapper-grid">
+      <form class="form-wrapper-grid" method="GET">
         <div class="company-info-a">
           <label for="">Company Information</label>
-          <input type="text" placeholder="*Your Name" />
-          <input type="text" placeholder="Company Name" />
+          <input type="text" placeholder="*Your Name" required />
+          <input type="text" placeholder="Company Name" required />
         </div>
         <div class="company-info-b">
           <label for="">&nbsp;</label>
-          <input type="email" placeholder="email" />
-          <input type="tel" placeholder="*Phone number" />
+          <!-- inline JS is a bad idea for security purposes -->
+          <input type="email" placeholder="email" required  oninvalid="this.setCustomValidity('Please Enter valid email')"/>
+          <input type="tel" placeholder="*Phone number" required />
         </div>
 
         <div class="pickup-info">
@@ -187,7 +189,7 @@
           <button type="submit" class="submit-btn">SUBMIT</button>
         </div>
         <div class="clear-btn-container">
-          <button>CLEAR</button>
+          <button type="reset">CLEAR</button>
         </div>
       </form>
     </div>

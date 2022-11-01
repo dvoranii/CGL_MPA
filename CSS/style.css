@@ -20,7 +20,8 @@ h1 {
 
 p,
 ul,
-address {
+address,
+a {
   font-size: clamp(1vw, 14px, 18px);
   line-height: 1.4;
 }
@@ -32,7 +33,7 @@ address {
   padding: 20px;
   font-size: clamp(12px, 10vw, 18px);
   margin-inline: auto;
-  /* margin: 0 auto; */
+  max-width: 1200px;
 }
 
 .header-logo {
@@ -173,7 +174,14 @@ address {
 .title-wrapper {
   display: flex;
   align-items: center;
-  padding-bottom: 1.2rem;
+  padding: 2.4rem 0 2.4rem 0;
+}
+
+.title-wrapper.sporting-title-wrapper {
+  margin-bottom: 3.2rem;
+  padding: 2.4rem 0 2.4rem 0;
+  background-color: rgb(112, 112, 112);
+  justify-content: center;
 }
 
 .title-wrapper img {
@@ -190,10 +198,6 @@ address {
 }
 .service-freight-wrapper img {
   width: 30vw;
-}
-
-.title-wrapper.sporting-title-wrapper {
-  justify-content: center;
 }
 
 .title-wrapper.sporting-title-wrapper p {
@@ -221,7 +225,7 @@ address {
 }
 
 .sporting-goods-grid img {
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -234,8 +238,16 @@ address {
 }
 
 .sporting-goods-grid p {
-  padding-top: 2.4rem;
+  padding-top: 3.2rem;
   padding-left: 1.2rem;
+}
+
+.sporting-goods-grid h2 {
+  padding-bottom: 1.2rem;
+}
+
+.sporting-goods-grid div {
+  max-height: 400px;
 }
 
 .hero-logo {
@@ -248,7 +260,7 @@ address {
   background: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.5)),
     url("/assets/ocean.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
 }
 
