@@ -1,6 +1,3 @@
-:root {
-}
-
 *,
 *::before,
 *::after {
@@ -37,77 +34,35 @@ a {
 }
 
 .header-logo {
-  width: clamp(200px, 40vw, 300px);
-  height: fit-content;
   padding: 20px;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.logo img {
+  width: clamp(200px, 40vw, 300px);
   height: fit-content;
-  background: #6793aa;
-  font-size: clamp(14px, 2vw, 18px);
+  padding: 20px 10px;
 }
 
-.nav-inner {
-  padding: 10px;
+nav {
   display: flex;
-  justify-content: right;
+  justify-content: space-around;
   align-items: center;
-  height: 100%;
-  max-width: 100vw;
-}
-
-.nav__link {
-  display: block;
-  padding: 12px 18px;
-  text-decoration: none;
-  color: #eeeeee;
-  font-weight: 500;
-}
-
-.nav__link:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.service-submenu {
-  position: relative;
-}
-
-.service-submenu:hover .submenu-option1 {
-  /* display: block; */
-  animation: fadeInSlideDown 250ms ease;
-  animation-fill-mode: forwards;
-}
-
-.submenu-option1 {
-  position: absolute;
-  /* overflow: hidden; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 8vh;
   background-color: grey;
-  opacity: 0;
-  visibility: hidden;
 }
 
-.submenu-option1 a {
-  font-size: 16px;
-  width: 100%;
-  color: white;
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links a {
+  /* padding: 10px; */
+  color: rgba(255, 226, 226);
   text-decoration: none;
-  padding: 10px;
-  transition: all 250ms ease;
-}
-
-.submenu-option1 a:hover {
-  color: black;
-}
-
-.services-link {
-  pointer-events: none;
+  letter-spacing: 1.2px;
 }
 
 /* do some dropdown menu animations */
@@ -115,7 +70,7 @@ a {
   from {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
+    transform: translateY(-4px);
   }
   to {
     opacity: 1;
@@ -136,8 +91,26 @@ a {
   }
 }
 
-.transportation-menu {
-  position: relative;
+.contact-submenu,
+.transportation-submenu {
+  position: absolute;
+  list-style: none;
+  opacity: 0;
+  background: black;
+  margin-top: -4px;
+  padding: 10px;
+}
+
+.transportation-submenu {
+}
+.contact-link:hover + .contact-submenu,
+.contact-submenu:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
+}
+
+.transportation-link:hover + .transportation-submenu,
+.transportation-submenu:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
 }
 
 .transportation-menu:hover .transportation-submenu {
@@ -145,19 +118,23 @@ a {
   animation-fill-mode: forwards;
 }
 
-.transportation-submenu {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  left: 100%;
-  top: 0;
-  background-color: grey;
-  opacity: 0;
-  visibility: hidden;
+.transportation-submenu-wrapper {
+  position: relative;
 }
 
-.transportation-submenu a:hover .transportation-menu a {
-  color: blue;
+.transportation-submenu-a {
+  list-style: none;
+  position: absolute;
+  right: -93%;
+  top: -10px;
+  background: black;
+  padding: 10px;
+  opacity: 0;
+}
+
+.transportation-link:hover + .transportation-submenu-a,
+.transportation-submenu-a:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
 }
 
 .transportation-grid {
@@ -323,4 +300,84 @@ input.checkbox {
 }
 .additional-info textarea {
   width: 100%;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.burger {
+  display: none;
+  padding: 10px;
+  z-index: 99999;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    width: 50%;
+    transform: translateX(100%);
+    transition: all 500ms ease;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  transition: all 150ms ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
