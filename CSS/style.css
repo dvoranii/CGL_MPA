@@ -98,11 +98,9 @@ nav {
   opacity: 0;
   background: black;
   margin-top: -4px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
-.transportation-submenu {
-}
 .contact-link:hover + .contact-submenu,
 .contact-submenu:hover {
   animation: fadeInSlideDown 0.5s ease forwards;
@@ -113,11 +111,6 @@ nav {
   animation: fadeInSlideDown 0.5s ease forwards;
 }
 
-.transportation-menu:hover .transportation-submenu {
-  animation: fadeInSlideLeft 250ms ease;
-  animation-fill-mode: forwards;
-}
-
 .transportation-submenu-wrapper {
   position: relative;
 }
@@ -125,16 +118,18 @@ nav {
 .transportation-submenu-a {
   list-style: none;
   position: absolute;
-  right: -93%;
-  top: -10px;
+  right: -85%;
+  top: 0;
   background: black;
   padding: 10px;
   opacity: 0;
+  pointer-events: none;
 }
 
 .transportation-link:hover + .transportation-submenu-a,
 .transportation-submenu-a:hover {
   animation: fadeInSlideDown 0.5s ease forwards;
+  pointer-events: all;
 }
 
 .transportation-grid {
