@@ -341,7 +341,7 @@ input.checkbox {
     transition: all 500ms ease;
   }
 
-  .nav-links li {
+  .nav__link {
     opacity: 0;
   }
 }

@@ -4,24 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Document</title>
   </head>
   <body>
     <nav class="nav">
       <div class="logo">
-        <img src="/assets/CGL-logo.png" alt="" />
+        <a href="/">
+          <img src="/assets/CGL-logo.png" alt="Home" title="Home" />
+        </a>
       </div>
       <ul class="nav-links">
         <li><a href="/" class="nav__link" data-link>Home</a></li>
         <li><a href="/about" class="nav__link" data-link>About</a></li>
         <li>
-          <a
-            href="/services/transportation"
-            data-link
-            class="transportation-link"
-            >Services&nbsp;▾</a
-          >
+          <a href="#" data-link class="transportation-link">Services&nbsp;▾</a>
           <ul class="transportation-submenu">
             <li class="transportation-submenu-wrapper">
               <a
@@ -88,5 +85,7 @@
         </p>
       </div>
     </div>
+
+    <script src="/JS/app.js"></script>
   </body>
 </html>
